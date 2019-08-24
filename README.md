@@ -21,6 +21,6 @@ Essentials
 - JPetstore on MyBatis Spring Boot Starter https://github.com/kazuki43zoo/mybatis-spring-boot-jpetstore
 
 ## Run on Application Server
-This project is a clone of JPETSTORE 6 which allows to connect to a mysql database. 
+This project is a clone of the jpetstore mybatis project. There are modification for using a mariadb database and running the DB scripts using liquibase. 
 
 Further steps will be updated of deploying database scripts using liquibase and building and deploying the application into docker.
