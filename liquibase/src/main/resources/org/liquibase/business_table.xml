@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+		 <changeSet id="1" author="indira">
+			<createTable tableName="clinicallab">
+				<column name="id" type="int"
+				autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+				</column>
+				<column name="labname" type="varchar(50)"/>
+				<column name="lablocation" type="varchar(50)">
+				<constraints nullable="false"/>
+				</column>
+			</createTable>
+                         <rollback>
+        		 <dropTable tableName="clinicallab"/>
+    			 </rollback>
+			</changeSet>
+			<changeSet id="2" author="indira">
+			<createTable tableName="Department">
+				<column name="deptid" type="int"
+				autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+				</column>
+				<column name="deptname" type="varchar(50)"/>
+				<column name="deptlocation" type="varchar(50)">
+				<constraints nullable="false"/>
+				</column>
+			</createTable>
+			</changeSet>
+			<changeSet id="tag-1.1" author="indira">
+				<tagDatabase tag="1.1" />
+			</changeSet>
+</databaseChangeLog>
